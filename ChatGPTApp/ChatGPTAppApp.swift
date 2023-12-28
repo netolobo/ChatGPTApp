@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct ChatGPTAppApp: App {
+    
+    @State private var appState: AppState = AppState()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if appState.isLoggedIn {
+                ContentView()
+            } else {
+                AuthView()
+                    .environment(appState)
+            }
+            
         }
     }
 }
