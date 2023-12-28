@@ -9,10 +9,12 @@ import Firebase
 import FirebaseAuth
 import Foundation
 import Swift
+import SwiftUI
 
 @Observable
 class AppState {
     var currentUser: User?
+    var navigationPath = NavigationPath()
     
     var isLoggedIn: Bool {
         return currentUser != nil

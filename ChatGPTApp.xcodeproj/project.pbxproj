@@ -43,6 +43,14 @@
 		5A027F6B2B3D0B3400BB1A9D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5A027F6A2B3D0B3400BB1A9D /* FirebaseStorage */; };
 		5A027F6D2B3D0B3400BB1A9D /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5A027F6C2B3D0B3400BB1A9D /* FirebaseStorageCombine-Community */; };
 		5A027F6F2B3D0F4D00BB1A9D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F6E2B3D0F4D00BB1A9D /* AppState.swift */; };
+		5A027F722B3D1F7900BB1A9D /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F712B3D1F7900BB1A9D /* ChatListViewModel.swift */; };
+		5A027F742B3D1F9700BB1A9D /* ChatListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F732B3D1F9700BB1A9D /* ChatListState.swift */; };
+		5A027F762B3D1FEC00BB1A9D /* AppChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F752B3D1FEB00BB1A9D /* AppChat.swift */; };
+		5A027F782B3D205300BB1A9D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F772B3D205300BB1A9D /* ChatModel.swift */; };
+		5A027F7A2B3D21FD00BB1A9D /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F792B3D21FD00BB1A9D /* ChatListView.swift */; };
+		5A027F802B3D32B700BB1A9D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F7F2B3D32B600BB1A9D /* ProfileView.swift */; };
+		5A027F822B3D331300BB1A9D /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F812B3D331300BB1A9D /* ChatView.swift */; };
+		5A027F842B3D33F100BB1A9D /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F832B3D33F100BB1A9D /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +64,14 @@
 		5A027F322B3BDDF300BB1A9D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		5A027F352B3D09CF00BB1A9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A027F6E2B3D0F4D00BB1A9D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		5A027F712B3D1F7900BB1A9D /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
+		5A027F732B3D1F9700BB1A9D /* ChatListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListState.swift; sourceTree = "<group>"; };
+		5A027F752B3D1FEB00BB1A9D /* AppChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChat.swift; sourceTree = "<group>"; };
+		5A027F772B3D205300BB1A9D /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		5A027F792B3D21FD00BB1A9D /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		5A027F7F2B3D32B600BB1A9D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5A027F812B3D331300BB1A9D /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		5A027F832B3D33F100BB1A9D /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +131,9 @@
 		5A027F1F2B3BDD9500BB1A9D /* ChatGPTApp */ = {
 			isa = PBXGroup;
 			children = (
+				5A027F7E2B3D329D00BB1A9D /* Profile */,
+				5A027F7B2B3D328600BB1A9D /* Chat */,
+				5A027F702B3D1F5C00BB1A9D /* ChatList */,
 				5A027F352B3D09CF00BB1A9D /* GoogleService-Info.plist */,
 				5A027F202B3BDD9500BB1A9D /* ChatGPTAppApp.swift */,
 				5A027F222B3BDD9500BB1A9D /* ContentView.swift */,
@@ -142,6 +161,35 @@
 				5A027F322B3BDDF300BB1A9D /* AuthService.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		5A027F702B3D1F5C00BB1A9D /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				5A027F712B3D1F7900BB1A9D /* ChatListViewModel.swift */,
+				5A027F732B3D1F9700BB1A9D /* ChatListState.swift */,
+				5A027F752B3D1FEB00BB1A9D /* AppChat.swift */,
+				5A027F772B3D205300BB1A9D /* ChatModel.swift */,
+				5A027F792B3D21FD00BB1A9D /* ChatListView.swift */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		5A027F7B2B3D328600BB1A9D /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				5A027F812B3D331300BB1A9D /* ChatView.swift */,
+				5A027F832B3D33F100BB1A9D /* ChatViewModel.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		5A027F7E2B3D329D00BB1A9D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5A027F7F2B3D32B600BB1A9D /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,9 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A027F7A2B3D21FD00BB1A9D /* ChatListView.swift in Sources */,
+				5A027F802B3D32B700BB1A9D /* ProfileView.swift in Sources */,
 				5A027F312B3BDDDE00BB1A9D /* AuthViewModel.swift in Sources */,
 				5A027F232B3BDD9500BB1A9D /* ContentView.swift in Sources */,
 				5A027F332B3BDDF400BB1A9D /* AuthService.swift in Sources */,
+				5A027F742B3D1F9700BB1A9D /* ChatListState.swift in Sources */,
+				5A027F822B3D331300BB1A9D /* ChatView.swift in Sources */,
+				5A027F762B3D1FEC00BB1A9D /* AppChat.swift in Sources */,
+				5A027F842B3D33F100BB1A9D /* ChatViewModel.swift in Sources */,
+				5A027F782B3D205300BB1A9D /* ChatModel.swift in Sources */,
+				5A027F722B3D1F7900BB1A9D /* ChatListViewModel.swift in Sources */,
 				5A027F6F2B3D0F4D00BB1A9D /* AppState.swift in Sources */,
 				5A027F212B3BDD9500BB1A9D /* ChatGPTAppApp.swift in Sources */,
 				5A027F2F2B3BDDC600BB1A9D /* AuthView.swift in Sources */,
