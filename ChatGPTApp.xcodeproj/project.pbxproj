@@ -51,6 +51,8 @@
 		5A027F802B3D32B700BB1A9D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F7F2B3D32B600BB1A9D /* ProfileView.swift */; };
 		5A027F822B3D331300BB1A9D /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F812B3D331300BB1A9D /* ChatView.swift */; };
 		5A027F842B3D33F100BB1A9D /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F832B3D33F100BB1A9D /* ChatViewModel.swift */; };
+		5A855D112B3E7496008D60FA /* AppMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A855D102B3E7496008D60FA /* AppMessage.swift */; };
+		5A855D142B3E7561008D60FA /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 5A855D132B3E7561008D60FA /* OpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,7 @@
 		5A027F7F2B3D32B600BB1A9D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5A027F812B3D331300BB1A9D /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		5A027F832B3D33F100BB1A9D /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		5A855D102B3E7496008D60FA /* AppMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 				5A027F572B3D0B3400BB1A9D /* FirebaseFunctions in Frameworks */,
 				5A027F6D2B3D0B3400BB1A9D /* FirebaseStorageCombine-Community in Frameworks */,
 				5A027F672B3D0B3400BB1A9D /* FirebaseRemoteConfig in Frameworks */,
+				5A855D142B3E7561008D60FA /* OpenAI in Frameworks */,
 				5A027F432B3D0B3400BB1A9D /* FirebaseAppDistribution-Beta in Frameworks */,
 				5A027F472B3D0B3400BB1A9D /* FirebaseAuthCombine-Community in Frameworks */,
 				5A027F652B3D0B3400BB1A9D /* FirebasePerformance in Frameworks */,
@@ -180,6 +184,7 @@
 			children = (
 				5A027F812B3D331300BB1A9D /* ChatView.swift */,
 				5A027F832B3D33F100BB1A9D /* ChatViewModel.swift */,
+				5A855D102B3E7496008D60FA /* AppMessage.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				5A027F682B3D0B3400BB1A9D /* FirebaseRemoteConfigSwift */,
 				5A027F6A2B3D0B3400BB1A9D /* FirebaseStorage */,
 				5A027F6C2B3D0B3400BB1A9D /* FirebaseStorageCombine-Community */,
+				5A855D132B3E7561008D60FA /* OpenAI */,
 			);
 			productName = ChatGPTApp;
 			productReference = 5A027F1D2B3BDD9500BB1A9D /* ChatGPTApp.app */;
@@ -267,6 +273,7 @@
 			mainGroup = 5A027F142B3BDD9500BB1A9D;
 			packageReferences = (
 				5A027F372B3D0B3300BB1A9D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5A855D122B3E7560008D60FA /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
 			productRefGroup = 5A027F1E2B3BDD9500BB1A9D /* Products */;
 			projectDirPath = "";
@@ -298,6 +305,7 @@
 				5A027F7A2B3D21FD00BB1A9D /* ChatListView.swift in Sources */,
 				5A027F802B3D32B700BB1A9D /* ProfileView.swift in Sources */,
 				5A027F312B3BDDDE00BB1A9D /* AuthViewModel.swift in Sources */,
+				5A855D112B3E7496008D60FA /* AppMessage.swift in Sources */,
 				5A027F232B3BDD9500BB1A9D /* ContentView.swift in Sources */,
 				5A027F332B3BDDF400BB1A9D /* AuthService.swift in Sources */,
 				5A027F742B3D1F9700BB1A9D /* ChatListState.swift in Sources */,
@@ -522,6 +530,14 @@
 				minimumVersion = 10.19.1;
 			};
 		};
+		5A855D122B3E7560008D60FA /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -659,6 +675,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5A027F372B3D0B3300BB1A9D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		5A855D132B3E7561008D60FA /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A855D122B3E7560008D60FA /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
