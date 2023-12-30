@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ChatGPTAppApp: App {
     
-    @State private var appState: AppState = AppState()
+    @State private var appState = AppState()
     
     var body: some Scene {
         WindowGroup {

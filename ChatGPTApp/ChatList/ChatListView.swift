@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChatListView: View {
     @State private var viewModel = ChatListViewModel()
+    @Environment(AppState.self) private var appState
     
     var body: some View {
         Group {
@@ -64,7 +65,14 @@ struct ChatListView: View {
             
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    viewModel.createChat()
+                    Task {
+                        do {
+                            let chatID = try await viewModel.createChat(user: appState.currentUser?.uid)
+                            appState.navigationPath.append(chatID)
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                    }
                 } label: {
                     Image(systemName: "square.and.pencil")
                 }
@@ -78,7 +86,7 @@ struct ChatListView: View {
         }
         .onAppear {
             if viewModel.loadingState == .none {
-                viewModel.fetchData()
+                viewModel.fetchData(user: appState.currentUser?.uid)
             }
         }
     }

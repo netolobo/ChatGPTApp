@@ -7,10 +7,11 @@
 
 import OpenAI
 import Foundation
+import FirebaseFirestoreSwift
 
 struct AppMessage: Identifiable, Codable, Hashable {
-    let id: String?
+    @DocumentID var id: String?
     var text: String
     let role: Chat.Role
-    let createdAt: Date
+    var createdAt: FirestoreDate = FirestoreDate()
 }

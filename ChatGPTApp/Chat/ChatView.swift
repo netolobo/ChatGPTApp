@@ -28,6 +28,8 @@ struct ChatView: View {
             }
             messageInputView
         }
+        .navigationTitle(viewModel.chat?.topic ?? "New Chat")
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             viewModel.fetchData()
         }
@@ -85,11 +87,11 @@ struct ChatView: View {
                 .background(.gray.opacity(0.1))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .onSubmit {
-                    viewModel.sendMessage()
+                    sendMessage()
                 }
             
             Button {
-                viewModel.sendMessage()
+                sendMessage()
             } label: {
                 Text("Send")
                     .padding()
@@ -101,6 +103,16 @@ struct ChatView: View {
             }
         }
         .padding()
+    }
+    
+    private func sendMessage() {
+        Task {
+            do {
+                try await viewModel.sendMessage()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

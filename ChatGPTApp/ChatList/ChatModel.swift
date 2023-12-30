@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import OpenAI
 
 enum ChatModel: String, Codable, CaseIterable, Hashable {
     case gpt3_5_turbo = "GPT 3.5 Turbo"
@@ -18,6 +19,15 @@ enum ChatModel: String, Codable, CaseIterable, Hashable {
             return .green
         case .gpt4:
             return .purple
+        }
+    }
+    
+    var model: Model {
+        switch self {
+        case .gpt3_5_turbo:
+            return .gpt3_5Turbo
+        default:
+            return .gpt4
         }
     }
 }

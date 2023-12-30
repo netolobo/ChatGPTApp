@@ -51,6 +51,7 @@
 		5A027F802B3D32B700BB1A9D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F7F2B3D32B600BB1A9D /* ProfileView.swift */; };
 		5A027F822B3D331300BB1A9D /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F812B3D331300BB1A9D /* ChatView.swift */; };
 		5A027F842B3D33F100BB1A9D /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A027F832B3D33F100BB1A9D /* ChatViewModel.swift */; };
+		5A76D1372B3FD5230007024E /* FirestoreDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A76D1362B3FD5230007024E /* FirestoreDate.swift */; };
 		5A855D112B3E7496008D60FA /* AppMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A855D102B3E7496008D60FA /* AppMessage.swift */; };
 		5A855D142B3E7561008D60FA /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 5A855D132B3E7561008D60FA /* OpenAI */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		5A027F7F2B3D32B600BB1A9D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5A027F812B3D331300BB1A9D /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		5A027F832B3D33F100BB1A9D /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		5A76D1362B3FD5230007024E /* FirestoreDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDate.swift; sourceTree = "<group>"; };
 		5A855D102B3E7496008D60FA /* AppMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 				5A027F752B3D1FEB00BB1A9D /* AppChat.swift */,
 				5A027F772B3D205300BB1A9D /* ChatModel.swift */,
 				5A027F792B3D21FD00BB1A9D /* ChatListView.swift */,
+				5A76D1362B3FD5230007024E /* FirestoreDate.swift */,
 			);
 			path = ChatList;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				5A027F6F2B3D0F4D00BB1A9D /* AppState.swift in Sources */,
 				5A027F212B3BDD9500BB1A9D /* ChatGPTAppApp.swift in Sources */,
 				5A027F2F2B3BDDC600BB1A9D /* AuthView.swift in Sources */,
+				5A76D1372B3FD5230007024E /* FirestoreDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChatGPTApp/Preview Content\"";
+				DEVELOPMENT_TEAM = J43673834C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -478,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChatGPTApp/Preview Content\"";
+				DEVELOPMENT_TEAM = J43673834C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
