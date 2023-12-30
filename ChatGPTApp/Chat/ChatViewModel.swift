@@ -102,7 +102,8 @@ class ChatViewModel {
     }
     
     private func generateResponse(for message: AppMessage) async throws {
-        let openAI = OpenAI(apiToken: openAIKey)
+        let openAI = OpenAI(apiToken: "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")
+        print("apitoken= \(openAIKey)")
         let queryMessages = messages.map { appMessage in
             Chat(role: appMessage.role, content: appMessage.text)
         }

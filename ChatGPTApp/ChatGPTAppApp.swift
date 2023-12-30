@@ -17,6 +17,7 @@ struct ChatGPTAppApp: App {
             if appState.isLoggedIn {
                 NavigationStack(path: $appState.navigationPath) {
                     ChatListView()
+                        .environment(appState)
                 }
             } else {
                 AuthView()
