@@ -21,11 +21,11 @@ class ChatViewModel {
     var openAIKey: String {
             get {
                 access(keyPath: \.openAIKey)
-                return UserDefaults.standard.string(forKey: "openai_key") ?? ""
+                return UserDefaults.standard.string(forKey: "openai_api_key") ?? ""
             }
             set {
                 withMutation(keyPath: \.openAIKey) {
-                    UserDefaults.standard.setValue(newValue, forKey: "openai_key")
+                    UserDefaults.standard.setValue(newValue, forKey: "openai_api_key")
                 }
             }
         }
@@ -34,13 +34,11 @@ class ChatViewModel {
     
     init(chatId: String) {
         self.chatId = chatId
+        print("chatID received= \(chatId)")
+        fetchData()
     }
     
     func fetchData() {
-//        self.messages = [
-//            AppMessage(id: "1", text: "Hello how are your", role: .user, createdAt: Date()),
-//            AppMessage(id: "2", text: "Im good Thanks", role: .assistant, createdAt: Date()),
-//        ]
         db.collection("chats").document(chatId).getDocument(as: AppChat.self) { result in
             switch result {
             case .success(let success):
@@ -52,7 +50,7 @@ class ChatViewModel {
             }
         }
         
-        db.collection("chats").document(chatId).collection("messages").getDocuments { querySnapshot, error in
+        db.collection("chats").document(chatId).collection("message").getDocuments { querySnapshot, error in
             guard let documents = querySnapshot?.documents, !documents.isEmpty else { return }
             
             self.messages = documents.compactMap({ snapshot -> AppMessage? in
