@@ -11,4 +11,4 @@ https://youtube.com/shorts/kTTDHkmOq_s?feature=share
 - Swift
 - MVVM Architecture
 - OpenAI API
-- Firebase Firestore
+- Firebase Firestore and Authentication
