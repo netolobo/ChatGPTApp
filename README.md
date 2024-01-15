@@ -1,5 +1,5 @@
 # Chat GPT
-A Chat GPT app 
+A Chat GPT app built with OpenAI API and Firebase.
 
 https://youtube.com/shorts/kTTDHkmOq_s?feature=share
 
